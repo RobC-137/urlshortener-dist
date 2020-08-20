@@ -12,7 +12,9 @@ const path = require('path');
 require('dotenv').config();
 
 const app = express()
-const port = 3000
+app.enable('trust proxy');
+const port = process.env.PORT || 3000
+
 
 app.use(morgan('tiny'));
 app.use(helmet());
