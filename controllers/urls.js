@@ -74,7 +74,7 @@ exports.save_url_to_db = (UrlModel, SchemaValidator, SlugGenerator, TypeObjectId
 
             //Url: model
             const urlDb = new UrlModel(modelObject);
-            // console.log(req);
+
 
             const saved = await urlDb.save();
             res.json({
@@ -92,7 +92,7 @@ exports.delete_url = (UrlModel, TypeObjectId) => {
 
 
         const { id } = req.params
-        console.log('ID: ' + id);
+
 
         try {
             const deleted = await UrlModel.findByIdAndDelete({

@@ -33,7 +33,6 @@ function sortParams() {
             let sort = {};
             sort[sortField] = order;
             res.locals.sort = sort;
-            console.log(sort);
         }
         next();
 
@@ -69,27 +68,7 @@ function urlBelongsToUser(UrlModel, TypeObjectId) {
     }
 }
 
-// function pagination(model) {
-//     return async (req, res, next) => {
-//         const limit = parseInt(req.query.limit);
-//         const page = parseInt(req.query.page);
-//         console.log(limit, page);
 
-//         const startIndex = page * limit;
-//         const endIndex = (page + 1) * limit
-
-//         res.locals.results = res.locals.results.slice(startIndex, endIndex);
-
-//         try {
-//             const totalDocs = await model.countDocuments().exec()
-//             res.locals.count = totalDocs;
-//             next()
-//         } catch (error) {
-//             next(error)
-//         }
-
-//     }
-// }
 
 
 module.exports = router;

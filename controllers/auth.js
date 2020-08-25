@@ -15,7 +15,6 @@ exports.register_new_user = (UserModel, SchemaValidator, PassHasher, SaltGenerat
 
             const salt = await SaltGenerator();
             const hashedPassword = await PassHasher(password, salt)
-            console.log((hashedPassword));
 
             const userDB = new UserModel({
                 email,
@@ -29,7 +28,7 @@ exports.register_new_user = (UserModel, SchemaValidator, PassHasher, SaltGenerat
             error.status = 400;
             next(error)
         }
-        //console.log(email);
+
     }
 }
 
@@ -49,7 +48,7 @@ exports.login_local_user = (UserModel, SchemaValidator, PassHasher, tokenCreatio
             const correctPass = await PassHasher.compare(password, existing.password)
             if (!correctPass) throw new Error('Email or password is incorrect');
 
-            console.log(tokenCreation(existing._id.toJSON(), process.env.ACCESS_TOKEN_SECRET));
+
             const accessToken = tokenCreation(existing._id.toJSON(), process.env.ACCESS_TOKEN_SECRET)
 
             res.send({ accessToken })
