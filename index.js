@@ -27,7 +27,7 @@ const urls = require('./routes/urls')
 const redirect = require('./routes/redirect');
 const auth = require('./routes/auth');
 
-app.use(express.static(__dirname + '/dist/urlshortener'));
+app.use(express.static(__dirname + '/client/urlshortener'));
 
 app.get('/', (req, res) => res.sendFile(path.join(__dirname)));
 //Routes middleware
