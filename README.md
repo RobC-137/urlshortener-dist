@@ -1,12 +1,13 @@
 # URL shortener app
+[Live Demo](https://urlshortener137.herokuapp.com/)
 
-Technologies:
-FrontEnd:
+* Tehnologies
+  * FrontEnd
+    * [Angular](https://angular.io/)
+    * [Angular Material](https://material.angular.io/)
+  * Backend
+    * [Node.js](https://nodejs.org/en/)
+    * [Express](https://expressjs.com/)
 
-- [Angular]
-- [Angular Material]<https://material.angular.io/>
-  Backend:
-- [node.js]
-- [Express]
 
-Live Demo: https://urlshortener137.herokuapp.com/
+[FrontEnd Client Code](https://github.com/RobC-137/urlshortener-client)
