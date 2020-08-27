@@ -6,7 +6,7 @@ FrontEnd:
 - [Angular]
 - [Angular Material]<https://material.angular.io/>
   Backend:
-- [*NodeJS]
+- [node.js]
 - [Express]
 
 Live Demo: https://urlshortener137.herokuapp.com/
